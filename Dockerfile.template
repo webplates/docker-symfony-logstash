@@ -1,0 +1,5 @@
+FROM logstash:{{ parent }}
+
+COPY conf/ /etc/logstash/
+
+CMD ["-f", "/etc/logstash/logstash.conf"]
